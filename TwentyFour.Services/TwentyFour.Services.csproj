@@ -74,6 +74,10 @@
       <Project>{89F41D1D-B07E-4C97-AFFA-9C64394923D1}</Project>
       <Name>TwentyFour.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TwentyFour.Models\TwentyFour.Models.csproj">
+      <Project>{E75D556C-8D8C-485A-BFF8-DDE1ED17E593}</Project>
+      <Name>TwentyFour.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -4,28 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TwentyFour.Data;
+using TwentyFour.Models;
 using TwentyFourProject.Data;
 
 namespace TwentyFour.Services
 {
-    public class PostCreate
+    public class PostServices
     {
-        private readonly Guid _UserId;
-
-        public PostCreate(Guid userId)
-        {
-            _userId = userId;
-        }
 
         public bool CreatePost(PostCreate post)
         {
             var entity =
                 new Post()
                 {
-                    PostId = _userId,
                     Title = post.Title,
                     Text = post.Text
-                    
                 };
 
 
@@ -36,25 +29,30 @@ namespace TwentyFour.Services
             }
         }
 
-  /*      public IEnumerable<PostItems> GetPost()
+        public object GetPostById(int id)
         {
-            using (var ctx = new ApplicationDbContext))
-                {
-                var query =
-                    ctx
-
-                        .Posts
-                        .Where(e => e.UserId == _UserId)
-                        .Select(
-                        e =>
-                        new PostItem
-                        {
-                            PostId = e.PostId,
-                            Title = e.Title
-                        }
-                        );
-                return query.ToArray(); 
-            }*/
+            throw new NotImplementedException();
         }
+
+        /*      public IEnumerable<PostItems> GetPost()
+              {
+                  using (var ctx = new ApplicationDbContext))
+                      {
+                      var query =
+                          ctx
+
+                              .Posts
+                              .Where(e => e.UserId == _UserId)
+                              .Select(
+                              e =>
+                              new PostItem
+                              {
+                                  PostId = e.PostId,
+                                  Title = e.Title
+                              }
+                              );
+                      return query.ToArray(); 
+                  }*/
     }
 }
+
