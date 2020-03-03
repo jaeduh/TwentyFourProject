@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -35,6 +36,6 @@ namespace TwentyFourProject.Data
         public DbSet<Like> Likes { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Reply> Replys { get; set; }
-        public DbSet<User> Customer { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }

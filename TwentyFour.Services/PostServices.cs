@@ -10,11 +10,11 @@ namespace TwentyFour.Services
 {
     public class PostServices
     {
-        private readonly Guid _CustomerId;
+        private readonly Guid _UserId;
 
         public PostServices(Guid userId)
         {
-            _CustomerId = userId;
+            _UserId = userId;
         }
 
         public bool CreatePost(PostServices post)
@@ -22,7 +22,7 @@ namespace TwentyFour.Services
             var entity =
                 new Post()
                 {
-                    Id = _CustomerId,
+                    UserId = _CustomerId,
                     Title = post.Title,
                     Text = post.Text
                 };
