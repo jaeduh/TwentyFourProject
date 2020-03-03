@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using TwentyFour.Data;
 
 namespace TwentyFourProject.Data
 {
@@ -29,5 +30,11 @@ namespace TwentyFourProject.Data
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Like> Likes { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Reply> Replys { get; set; }
+        public DbSet<User> Customer { get; set; }
     }
 }
