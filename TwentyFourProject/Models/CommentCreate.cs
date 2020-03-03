@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TwentyFourProject.Data;
+using System.Web;
+using TwentyFour.Data;
 
-namespace TwentyFour.Data
+namespace TwentyFourProject.Models
 {
-    public class Comment
+    public class CommentCreate
     {
         [Key]
         //int CommentID
@@ -30,5 +29,6 @@ namespace TwentyFour.Data
         //Post CommentPost -- FOREIGN KEY FROM Post ID
         // INSERT "[ForeignKey(nameof(Comment))] ABOVE Post ID
         int PostID { get; set; }
+
     }
 }
