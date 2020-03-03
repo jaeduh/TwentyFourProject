@@ -66,5 +66,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TwentyFour.Data\TwentyFour.Data.csproj">
+      <Project>{89F41D1D-B07E-4C97-AFFA-9C64394923D1}</Project>
+      <Name>TwentyFour.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
