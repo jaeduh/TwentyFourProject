@@ -8,23 +8,24 @@ using TwentyFourProject.Data;
 
 namespace TwentyFour.Services
 {
-    public class PostServices
+    public class PostCreate
     {
         private readonly Guid _UserId;
 
-        public PostServices(Guid userId)
+        public PostCreate(Guid userId)
         {
-            _UserId = userId;
+            _userId = userId;
         }
 
-        public bool CreatePost(PostServices post)
+        public bool CreatePost(PostCreate post)
         {
             var entity =
                 new Post()
                 {
-                    UserId = _CustomerId,
+                    PostId = _userId,
                     Title = post.Title,
                     Text = post.Text
+                    
                 };
 
 
@@ -35,7 +36,7 @@ namespace TwentyFour.Services
             }
         }
 
-        public IEnumerable<PostItem> GetPost()
+  /*      public IEnumerable<PostItems> GetPost()
         {
             using (var ctx = new ApplicationDbContext))
                 {
@@ -43,7 +44,7 @@ namespace TwentyFour.Services
                     ctx
 
                         .Posts
-                        .Where(e => e.CustomerId == _CustomerId)
+                        .Where(e => e.UserId == _UserId)
                         .Select(
                         e =>
                         new PostItem
@@ -52,8 +53,8 @@ namespace TwentyFour.Services
                             Title = e.Title
                         }
                         );
-                return query.ToArray();
-            }
+                return query.ToArray(); 
+            }*/
         }
     }
 }
