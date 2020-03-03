@@ -33,6 +33,7 @@ namespace TwentyFourProject.Data
         {
             return new ApplicationDbContext();
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -44,7 +45,6 @@ namespace TwentyFourProject.Data
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
         }
-
 
         public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
         {
@@ -67,5 +67,6 @@ namespace TwentyFourProject.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<Reply> Replys { get; set; }
         public DbSet<User> User { get; set; }
+
     }
 }

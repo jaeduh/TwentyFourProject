@@ -215,7 +215,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PostController.cs" />
+
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -400,19 +401,13 @@
       <Name>TwentyFour.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\TwentyFour.Models\TwentyFour.Models.csproj">
-      <Project>{e75d556c-8d8c-485a-bff8-dde1ed17e593}</Project>
+      <Project>{E75D556C-8D8C-485A-BFF8-DDE1ED17E593}</Project>
       <Name>TwentyFour.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\TwentyFour.Services\TwentyFour.Services.csproj">
-      <Project>{b8b1d01d-3a5f-4d63-b8a6-0da981e6a278}</Project>
+      <Project>{B8B1D01D-3A5F-4D63-B8A6-0DA981E6A278}</Project>
       <Name>TwentyFour.Services</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
