@@ -28,14 +28,11 @@ namespace TwentyFourProject.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-
-        public DbSet<User> User { get; set; }
-
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -48,21 +45,28 @@ namespace TwentyFourProject.Data
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
         }
-    }
 
-    public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
-    {
-        public IdentityUserLoginConfiguration()
+        public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
         {
-            HasKey(iul => iul.UserId);
+            public IdentityUserLoginConfiguration()
+            {
+                HasKey(iul => iul.UserId);
+            }
         }
-    }
 
-    public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
-    {
-        public IdentityUserRoleConfiguration()
+        public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
         {
-            HasKey(iur => iur.UserId);
+            public IdentityUserRoleConfiguration()
+            {
+                HasKey(iur => iur.UserId);
+            }
         }
+
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Like> Likes { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Reply> Replys { get; set; }
+        public DbSet<User> User { get; set; }
+
     }
 }
